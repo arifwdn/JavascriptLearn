@@ -1,2 +1,2 @@
 # JavascriptLearn
-Bisa tes di console web browser atau di running javascript online.
+Bisa tes di console web browser || di running javascript online || node JS.
