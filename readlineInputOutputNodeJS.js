@@ -15,5 +15,8 @@ const ask = (question, func)=>{
 
 
 ask('masukkan angka : ', (answer)=>{
-    console.log(`angka nya = ${answer}`)
+    answer = answer.split(' ')
+    answer.forEach((datas)=>{
+        console.log(datas)
+    })
 })
