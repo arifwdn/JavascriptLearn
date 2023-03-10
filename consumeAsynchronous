@@ -1,0 +1,53 @@
+const readline = require('readline')
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+// Memanggil asynchronous dengan Promise
+const ask = ()=>{
+    return new Promise((resolve)=>{
+        rl.question("Masukkan : ", (answer)=>{
+            rl.close()
+            resolve(answer)
+        })
+    })
+}
+
+// Memanggil data asynchronous dengan async await
+const getData = async ()=>{
+    const data = await ask()
+    console.log(data)
+}
+getData()
+
+// Memanggil dengan then
+// const data = ()=>{
+//     ask().then((result)=>{
+//         console.log(result)
+//     })
+//     Promise.all([ask()]).then((answer)=>{
+//         console.log(answer)
+//     })
+// }
+// data()
+
+
+
+// Memanggil asynchronous dengan callback
+// const ask = (question, func)=>{
+//     rl.question(question, (answer)=>{
+//         //rl.write(answer)
+//         func(answer)
+//         rl.close()
+//     })
+// }
+
+
+// ask('masukkan angka : ', (answer)=>{
+//     answer = answer.split(' ')
+//     answer.forEach((datas)=>{
+//         console.log(datas)
+//     })
+// })
